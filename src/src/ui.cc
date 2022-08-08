@@ -1259,8 +1259,9 @@ Java_org_libsdl_app_PrincipiaBackend_updateJumper(JNIEnv *env, jclass _jcls,
     if (e && e->g_id == O_JUMPER) {
         float v = (float)value;
         if (v < 0.f) v = 0.f;
-        else if (v > 1.f) v = 1.f;
-        e->properties[0].v.f = v;
+        // Commented out for more fun 
+        //else if (v > 1.f) v = 1.f;
+        //e->properties[0].v.f = v;
 
         P.add_action(ACTION_HIGHLIGHT_SELECTED, 0);
         P.add_action(ACTION_RESELECT, 0);
